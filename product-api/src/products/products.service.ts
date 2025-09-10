@@ -14,8 +14,8 @@ export class ProductsService {
     return this.productsRepository.find();
   }
 
-  async create(products: Product[]): Promise<void> {
-    await this.productsRepository.save(products);
+  async create(productData: Product): Promise<Product> {
+    return this.productsRepository.save(productData);
   }
 }
 
